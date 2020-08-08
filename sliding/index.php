@@ -1,4 +1,6 @@
-
+<?php
+  require 'includes/info.display.php';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +18,7 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="#" class="sign-in-form" method="post"> <!--Start of sign in form-->
+          <form action="includes/login.inc.php" class="sign-in-form" method="post"> <!--Start of sign in form-->
             <h2 class="title">BlueBeard</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
@@ -118,5 +120,9 @@
     </div>
 
     <script src="app.js"></script>
+
+    <!--paste footer here-->
+
+
   </body>
 </html>

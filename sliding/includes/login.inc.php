@@ -12,7 +12,7 @@ if(isset($_POST['login-submit'])){
     else{
         $sql = "SELECT * FROM users WHERE uidUsers=? OR emailUsers=?;";
         $stmt = mysqli_stmt_init($conn);
-        if(!mysqli_stmt_prepare($stmt)){
+        if(!mysqli_stmt_prepare($stmt, $sql)){
             header("Location: ../index.php?error=sqlerror");
             exit();
         }
@@ -31,7 +31,7 @@ if(isset($_POST['login-submit'])){
                     $_SESSION['userId'] = $row['idUsers'];
                     $_SESSION['userUid'] = $row['uidUsers'];
 
-                    header("Location: ../dashboard.php?login=success");
+                    header("Location: ../dshbrd.php?login=success");
                     exit();
                 }
                 else{
