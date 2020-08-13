@@ -30,6 +30,7 @@ if(isset($_POST['login-submit'])){
                     session_start();
                     $_SESSION['userId'] = $row['idUsers'];
                     $_SESSION['userUid'] = $row['uidUsers'];
+                    $_SESSION['accgrant'] = true;
 
                     header("Location: ../dshbrd.php?login=success");
                     exit();
@@ -45,12 +46,6 @@ if(isset($_POST['login-submit'])){
             }
         }
     }
-
-
-
-
-
-
 
 }
 else{
